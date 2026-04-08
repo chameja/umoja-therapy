@@ -1,0 +1,3 @@
+Renamed Session: I renamed your Session model to TherapySession. This is because Session is a reserved and crucial keyword in SQLModel/SQLAlchemy (it's the tool that talks to the database), so having a model with the same name causes a conflict.
+
+Database Dependency (Depends(get_session)): This is FastAPI magic. Every time an endpoint is called, it opens a connection to MySQL, does the work, and safely closes it when finished.
