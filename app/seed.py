@@ -1,11 +1,12 @@
 from sqlmodel import Session
 from datetime import datetime, timedelta
-from main import (
-    engine, User, UserRole, Client, Therapist, 
+from models import (
+    User, UserRole, Client, Therapist, 
     IntakeFormQuestion, ClientAssignment, 
     SessionRequest, TherapySession, SessionStatus
 )
 from security import get_password_hash
+from database import engine
 
 def seed_database():
     print("Starting database seed process...")
